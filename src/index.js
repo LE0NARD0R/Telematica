@@ -8,7 +8,7 @@ const con = mysql.createConnection({
     host:   "database-telematica.cfcr2myfepyb.us-east-1.rds.amazonaws.com",
     user:   "root", 
     password: "123456789",
-    database: "database-telematica"
+    database: "mundialDB"
 });
 
 con.connect(function (err) {
