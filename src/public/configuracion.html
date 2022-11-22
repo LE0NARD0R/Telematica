@@ -70,7 +70,7 @@
             <div class="w3-row w3-center w3-card w3-padding">
                 <p>Escoja la opción que desea modificar o eliminar:</p>
                 <select name="moddel" id="moddel">
-                    <option value="0">Escoja una opción</option>
+                    <option value="">Escoja una opción</option>
                     <option value="1">Nombre del equipo</option>
                     <option value="2">Información de los jugadores</option>
                     <option value="3">información del estadio</option>
@@ -93,5 +93,27 @@
 
 </body>
 
+<script>
 
+let opt = document.querySelector('moddel');
+let parrafo = document.querySelector('p');  
+
+seleccionar.addEventListener('change', establecerClima);
+
+function establecerClima() {
+  let eleccion = seleccionar.value;
+
+  if (eleccion === 'soleado') {
+    parrafo.textContent = 'El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.';
+  } else if (eleccion === 'lluvioso') {
+    parrafo.textContent = 'Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.';
+  } else if (eleccion === 'nevando') {
+    parrafo.textContent = 'Está nevando ─ ¡está congelando! Lo mejor es quedarse en casa con una taza caliente de chocolate, o hacer un muñeco de nieve.';
+  } else if (eleccion === 'nublado') {
+    parrafo.textContent = 'No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.';
+  } else {
+    parrafo.textContent = '';
+  }
+}
+</script>
 </html>
