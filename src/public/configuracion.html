@@ -18,7 +18,7 @@
 <!-- Links (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="../index.html" class="w3-bar-item w3-button">Game Match</a>
+        <a href="/src/public/index.html" class="w3-bar-item w3-button">Game Match</a>
         
         <div class="w3-right w3-hide-small">
             <a href="#config" class="w3-bar-item w3-button">Configuración</a>
@@ -35,7 +35,7 @@
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INGRESO DE INFORMACIÓN</span></h5>
         <div class="w3-col m6 w3-padding-large w3-hide-small">
             <p>Ingrese la información del equipo:</p>
-            <form action="/action_page.php" target="_blank">
+            <form action="showall(" target="_blank">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del equipo" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre completo de los jugadores" required name="jugname"></p>
                 <p><input class="w3-input w3-padding-16" type="number" placeholder="Número en orden de los jugadores" required name="number"></p>
@@ -55,10 +55,10 @@
 
         <div class="w3-col m6 w3-padding-large w3-hide-small">
             <p>Ingrese la información de los árbitros:</p>
-            <form action="/other_page.php" target="_blank">
+            <form method="post" id="arbitros">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre de los árbitros" required name="arbitro"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nacionalidad de los árbitros" required name="nac"></p>
-                <p><button class="w3-button w3-black" type="submit">REGISTRAR ÁRBITROS</button></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="showall()">REGISTRAR ÁRBITROS</button></p>
             </form>
         </div>
         
@@ -93,5 +93,10 @@
 
 </body>
 
-
+<script>
+    function showall() {
+        var toprint = document.getElementById(arbitros);
+        console.log(torpint);
+    }
+</script>
 </html>
