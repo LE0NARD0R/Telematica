@@ -16,7 +16,7 @@ con.connect(function (err) {
 });
 
 //settings
-app.set('port', process.env.PORT || 9500)
+app.set('port', 9500)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')))
