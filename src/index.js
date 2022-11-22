@@ -5,10 +5,10 @@ const path =require("path");
 
 
 const con = mysql.createConnection({
-    host:   "localhost",
-    user:   "root", 
+    host:   "database-telematica.cfcr2myfepyb.us-east-1.rds.amazonaws.com",
+    user:   "admin", 
     password: "123456789",
-    database: "pagetelematica"
+    database: "database-telematica"
 });
 
 con.connect(function (err) {
