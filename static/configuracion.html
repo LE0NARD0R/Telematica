@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    body, html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="/static/configuracion.html" class="w3-bar-item w3-button">Configuración</a>
+        
+        <div class="w3-right w3-hide-small">
+            <a href="#moddel" class="w3-bar-item w3-button">Modificar</a>
+            <a href="../index.html" class="w3-bar-item w3-button">Home</a>
+          </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+    <!-- Info Section -->
+    <div class="w3-row w3-padding-64" id="about">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INGRESO DE INFORMACIÓN</span></h5>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+            <p>Ingrese la información del equipo:</p>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del equipo" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre completo de los jugadores" required name="jugname"></p>
+                <p><input class="w3-input w3-padding-16" type="number" placeholder="Número en orden de los jugadores" required name="number"></p>
+                <p><button class="w3-button w3-black" type="submit">REGISTRAR EQUIPO</button></p>
+            </form>
+        </div>
+  
+        <div class="w3-col m6 w3-padding-large">
+            <p>Ingrese la información del estadio:</p>
+            <form action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del estadio" required name="estadio"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ciudad en la que se encuentra el estadio" required name="ciudad"></p>
+                <p><input class="w3-input w3-padding-16" type="number" placeholder="Capacidad del estadio" required name="capacidad"></p>
+                <p><button class="w3-button w3-black" type="submit">REGISTRAR ESTADIO</button></p>
+            </form>
+        </div>
+
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+            <p>Ingrese la información de los árbitros:</p>
+            <form action="/other_page.php" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre de los árbitros" required name="arbitro"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nacionalidad de los árbitros" required name="nac"></p>
+                <p><button class="w3-button w3-black" type="submit">REGISTRAR ÁRBITROS</button></p>
+            </form>
+        </div>
+
+        
+        
+    </div>
+
+    
+
+    
+    
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-large">
+    <p>Realizado por: Anibal de ábila, Javier Orozco, Leonardo Rodriguez y Neymer Trocha</a></p>
+</footer>
+</div>
+    
+
+</body>
+
+
+</html>

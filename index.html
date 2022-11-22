@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = en>
 <head>
-<title>Match Site</title>
+<title>Game Site</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -29,12 +29,12 @@ body, html {
 <!-- Links (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px;">
-        <a href="#home" class="w3-bar-item w3-button">Match Site</a>
+        <a href="#home" class="w3-bar-item w3-button">Game Site</a>
         <div class="w3-right w3-hide-small">
             <a href="#topnews" class="w3-bar-item w3-button">Top News</a>
             <a href="#partidos" class="w3-bar-item w3-button">Partidos</a>
-            <a href="#equipos" class="w3-bar-item w3-button">Equipos</a>
-            <a href="#quejas" class="w3-bar-item w3-button">Quejas</a>
+            <a href="#equipos" class="w3-bar-item w3-button">Programación</a>
+            <a href="/static/configuracion.html" class="w3-bar-item w3-button">Configuración</a>
           </div>
     </div>
 </div>
@@ -42,7 +42,7 @@ body, html {
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-middle w3-center">
-    <span class="w3-text-white" style="font-size:90px">Match<br>Site</span>
+    <span class="w3-text-white" style="font-size:90px">Game<br>Site</span>
     </div>
 </header>
 
@@ -111,32 +111,19 @@ body, html {
 </div>
 
 <!-- Equipos Container -->
-<div class="w3-container" id="equipos" style="padding-bottom:32px;">
+<div class="w3-container" id="programación" style="padding-bottom:32px;">
     <div class="w3-content" style="max-width:1100px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EQUIPOS</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PROGRAMACIÓN</span></h5>
     <img src="/static/equipos.webp" alt="alternative.png" class="w3-image" style="width:100%">
-    <p>Equipos que se encuentran en el mundial Qatar 2022:</p>
+    <p>Programación que se encuentran en el mundial Qatar 2022:</p>
     <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-</div>
-
-<!-- Contact/Area Container -->
-<div class="w3-container" id="quejas" style="padding-bottom:32px;">
-    <div class="w3-content" style="max-width:500px">
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">QUEJAS</span></h5>
-        <p>Si tiene alguna queja o sugerencia colóquela aquí:</p>
-        <form action="/action_page.php" target="_blank">
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre" required name="Name"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Escriba su queja" required name="Queja"></p>
-            <p><button class="w3-button w3-black" type="submit">REGISTRAR QUEJA</button></p>
-        </form>
     </div>
 </div>
 
 <!-- End page content -->
-</div>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+<footer class="w3-center w3-black w3-padding-48 w3-large">
     <p>Realizado por: Anibal de ábila, Javier Orozco, Leonardo Rodriguez y Neymer Trocha</a></p>
 </footer>
 
