@@ -11,18 +11,6 @@
         height: 100%;
         font-family: "Inconsolata", sans-serif;
     }
-    #eqname{
-        max-width:1100px
-    }
-    #infjug{
-        max-width:1100px
-    }
-    #infest{
-        max-width:1100px
-    }
-    #infarb{
-        max-width:1100px
-    }
     </style>
 </head>
 <body>
@@ -35,6 +23,7 @@
         <div class="w3-right w3-hide-small">
             <a href="#config" class="w3-bar-item w3-button">Configuración</a>
             <a href="#moddel" class="w3-bar-item w3-button">Modificar</a>
+            <a href="#delete" class="w3-bar-item w3-button">Eliminar</a>
           </div>
     </div>
 </div>
@@ -82,7 +71,7 @@
         <div class="w3-content" style="max-width:1100px"></div>
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MODIFICAR</span></h5>
             <div class="w3-row w3-center w3-card w3-padding">
-                <p>Escoja la opción que desea modificar o eliminar:</p>
+                <p>Escoja la opción que desea modificar:</p>
                 <select name="moddel" id="moddel">
                     <option value="">Escoja una opción</option>
                     <option value="eqname">Nombre del equipo</option>
@@ -123,13 +112,56 @@
         </div>
     </div>
 
-    
+    <div class="W3-container" id="deletecont">
+        <div class="w3-content" style="max-width:1100px"></div>
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ELIMINAR</span></h5>
+            <div class="w3-row w3-center w3-card w3-padding">
+                <p>Escoja la opción que desea eliminar:</p>
+                <select name="delete" id="delete">
+                    <option value="">Escoja una opción</option>
+                    <option value="deqname">Nombre del equipo</option>
+                    <option value="dinfjug">Información de los jugadores</option>
+                    <option value="dinfest">información del estadio</option>
+                    <option value="dinfarb">Información de los árbitros</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="deqname">
+            <form method="post" id="deqname">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="eqp"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">ELIMINAR EQUIPO</button></p>
+            </form>
+        </div>
+
+        <div id="infjug">
+            <form method="post" id="dinfjug">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del jugador" required name="jug"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">ELIMINAR JUGADOR</button></p>
+            </form>
+        </div>
+
+        <div id="infest">
+            <form method="post" id="dinfest">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del estadio" required name="est"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">ELIMINAR ESTADIOS</button></p>
+            </form>
+        </div>
+
+        <div id="infarb">
+            <form method="post" id="dinfarb">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del árbitro" required name="arb"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">ELIMINAR ÁRBITROS</button></p>
+            </form>
+        </div>
+
+    </div>
 
     
     
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-48 w3-large">
-    <p>Realizado por: Anibal de ávila, Javier Orozco, Leonardo Rodriguez y Neymer Trocha</a></p>
+    <p>Realizado por: Anibal de Ávila, Javier Orozco, Leonardo Rodriguez y Neymer Trocha</a></p>
 </footer>
 </div>
     
@@ -138,13 +170,13 @@
 
 <script>
 
-let choice = document.querySelector('select');
- 
+let choice1 = document.getElementById('moddel');
+let choice2 = document.getElementById('delete');
+choice1.addEventListener('change', seleccionarCambio1);
+choice2.addEventListener('change', seleccionarCambio2);
 
-choice.addEventListener('change', seleccionarCambio);
-
-function seleccionarCambio() {
-  let opt = choice.value;
+function seleccionarCambio1() {
+  let opt = choice1.value;
   var eq = document.getElementById("eqname");
   var jug = document.getElementById("infjug");
   var est = document.getElementById("infest");
@@ -178,5 +210,41 @@ function seleccionarCambio() {
     arb.style.display = "none";
   }
 }
+
+function seleccionarCambio2() {
+    let opt = choice2.value;
+    var eq = document.getElementById("deqname");
+    var jug = document.getElementById("dinfjug");
+    var est = document.getElementById("dinfest");
+    var arb = document.getElementById("dinfarb");
+  
+    if (opt === 'deqname') {
+      eq.style.display = "block";
+      jug.style.display = "none";
+      est.style.display = "none";
+      arb.style.display = "none";
+  
+    } else if (opt === 'dinfjug') {
+      eq.style.display = "none";
+      jug.style.display = "block";
+      est.style.display = "none";
+      arb.style.display = "none";  
+  } else if (opt === 'dinfest') {
+      eq.style.display = "none";
+      jug.style.display = "none";
+      est.style.display = "block";
+      arb.style.display = "none";  
+  } else if (opt === 'dinfarb') {
+      eq.style.display = "none";
+      jug.style.display = "none";
+      est.style.display = "none";
+      arb.style.display = "block";  
+  } else {
+      eq.style.display = "none";
+      jug.style.display = "none";
+      est.style.display = "none";
+      arb.style.display = "none";
+    }
+  }
 </script>
 </html>
