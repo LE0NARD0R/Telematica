@@ -6,7 +6,7 @@ const path =require("path");
 
 const con = mysql.createConnection({
     host:   "database-telematica.cfcr2myfepyb.us-east-1.rds.amazonaws.com",
-    user:   "root", 
+    user:   "admin", 
     password: "123456789",
     database: "mundialDB"
 });
