@@ -78,6 +78,34 @@
                 </select>
             </div>
         </div>
+
+        <div id="eqname"></div>
+        <form method="post" id="arbitros">
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="arbitro"></p>
+            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
+            <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+        </form>
+        <div id="infjug">
+            <form method="post" id="arbitros">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del jugador" required name="arbitro"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            </form>
+        </div>
+        <div id="infest">
+            <form method="post" id="arbitros">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del estadio" required name="arbitro"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            </form>
+        </div>
+        <div id="infarb">
+            <form method="post" id="arbitros">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del árbitro" required name="arbitro"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            </form>
+        </div>
     </div>
 
     
@@ -95,21 +123,22 @@
 
 <script>
 
-let opt = document.querySelector('moddel');
-let parrafo = document.querySelector('p');  
+let choice = document.querySelector('select');
+ 
 
-seleccionar.addEventListener('change', establecerClima);
+choice.addEventListener('change', seleccionarCambio);
 
-function establecerClima() {
-  let eleccion = seleccionar.value;
+function seleccionarCambio() {
+  let opt = choice.value;
+  var eq = document.getElementById
 
-  if (eleccion === 'soleado') {
+  if (opt === 1) {
     parrafo.textContent = 'El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.';
-  } else if (eleccion === 'lluvioso') {
+  } else if (opt === 2) {
     parrafo.textContent = 'Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.';
-  } else if (eleccion === 'nevando') {
+  } else if (opt === 3) {
     parrafo.textContent = 'Está nevando ─ ¡está congelando! Lo mejor es quedarse en casa con una taza caliente de chocolate, o hacer un muñeco de nieve.';
-  } else if (eleccion === 'nublado') {
+  } else if (opt === 4) {
     parrafo.textContent = 'No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.';
   } else {
     parrafo.textContent = '';
