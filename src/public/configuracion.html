@@ -11,6 +11,18 @@
         height: 100%;
         font-family: "Inconsolata", sans-serif;
     }
+    #eqname{
+        max-width:1100px
+    }
+    #infjug{
+        max-width:1100px
+    }
+    #infest{
+        max-width:1100px
+    }
+    #infarb{
+        max-width:1100px
+    }
     </style>
 </head>
 <body>
@@ -39,6 +51,8 @@
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del equipo" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre completo de los jugadores" required name="jugname"></p>
                 <p><input class="w3-input w3-padding-16" type="number" placeholder="Número en orden de los jugadores" required name="number"></p>
+                <p>Seleccione el logo:</p>
+                <p><input class="w3-input w3-padding-16" type="file" placeholder="Logo del equipo" required name="logo"></p>
                 <p><button class="w3-button w3-black" type="submit">REGISTRAR EQUIPO</button></p>
             </form>
         </div>
@@ -71,20 +85,21 @@
                 <p>Escoja la opción que desea modificar o eliminar:</p>
                 <select name="moddel" id="moddel">
                     <option value="">Escoja una opción</option>
-                    <option value="1">Nombre del equipo</option>
-                    <option value="2">Información de los jugadores</option>
-                    <option value="3">información del estadio</option>
-                    <option value="4">Información de los árbitros</option>
+                    <option value="eqname">Nombre del equipo</option>
+                    <option value="infjug">Información de los jugadores</option>
+                    <option value="infest">información del estadio</option>
+                    <option value="infarb">Información de los árbitros</option>
                 </select>
             </div>
         </div>
 
-        <div id="eqname"></div>
-        <form method="post" id="arbitros">
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="arbitro"></p>
-            <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
-            <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
-        </form>
+        <div id="eqname">
+            <form method="post" id="arbitros">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="arbitro"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            </form>
+        </div>
         <div id="infjug">
             <form method="post" id="arbitros">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del jugador" required name="arbitro"></p>
@@ -130,18 +145,37 @@ choice.addEventListener('change', seleccionarCambio);
 
 function seleccionarCambio() {
   let opt = choice.value;
-  var eq = document.getElementById
+  var eq = document.getElementById("eqname");
+  var jug = document.getElementById("infojug");
+  var est = document.getElementById("infest");
+  var arb = document.getElementById("infarb");
 
-  if (opt === 1) {
-    parrafo.textContent = 'El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.';
-  } else if (opt === 2) {
-    parrafo.textContent = 'Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.';
-  } else if (opt === 3) {
-    parrafo.textContent = 'Está nevando ─ ¡está congelando! Lo mejor es quedarse en casa con una taza caliente de chocolate, o hacer un muñeco de nieve.';
-  } else if (opt === 4) {
-    parrafo.textContent = 'No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.';
-  } else {
-    parrafo.textContent = '';
+  if (opt === 'eqname') {
+    eq.style.display = "block";
+    jug.style.display = "none";
+    est.style.display = "none";
+    arb.style.display = "none";
+
+  } else if (opt === 'infjug') {
+    eq.style.display = "none";
+    jug.style.display = "block";
+    est.style.display = "none";
+    arb.style.display = "none";  
+} else if (opt === 'infest') {
+    eq.style.display = "none";
+    jug.style.display = "none";
+    est.style.display = "block";
+    arb.style.display = "none";  
+} else if (opt === 'infarb') {
+    eq.style.display = "none";
+    jug.style.display = "none";
+    est.style.display = "none";
+    arb.style.display = "block";  
+} else {
+    eq.style.display = "none";
+    jug.style.display = "none";
+    est.style.display = "none";
+    arb.style.display = "none";
   }
 }
 </script>
