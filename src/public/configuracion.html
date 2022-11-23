@@ -94,31 +94,31 @@
         </div>
 
         <div id="eqname">
-            <form method="post" id="arbitros">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="arbitro"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
-                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            <form method="post" id="eqname">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del equipo" required name="eqp"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="neqp"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">CAMBIAR EQUIPO</button></p>
             </form>
         </div>
         <div id="infjug">
-            <form method="post" id="arbitros">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del jugador" required name="arbitro"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
-                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            <form method="post" id="infjug">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del jugador" required name="jug"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="njug"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">CAMBIAR JUGADOR</button></p>
             </form>
         </div>
         <div id="infest">
-            <form method="post" id="arbitros">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del estadio" required name="arbitro"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
-                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            <form method="post" id="infest">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del estadio" required name="est"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nest"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">CAMBIAR ESTADIOS</button></p>
             </form>
         </div>
         <div id="infarb">
-            <form method="post" id="arbitros">
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del árbitro" required name="arbitro"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="nac"></p>
-                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">REGISTRAR ÁRBITROS</button></p>
+            <form method="post" id="infarb">
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre actual del árbitro" required name="arb"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre al que desea cambiar" required name="narb"></p>
+                <p><button class="w3-button w3-black" type="submit" onclick="CopyElem();PrintElem('#arbi')">CAMBIAR ÁRBITROS</button></p>
             </form>
         </div>
     </div>
@@ -146,7 +146,7 @@ choice.addEventListener('change', seleccionarCambio);
 function seleccionarCambio() {
   let opt = choice.value;
   var eq = document.getElementById("eqname");
-  var jug = document.getElementById("infojug");
+  var jug = document.getElementById("infjug");
   var est = document.getElementById("infest");
   var arb = document.getElementById("infarb");
 
