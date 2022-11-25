@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+<title>Game Match</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://sites.google.com/site/futbolactual2/_/rsrc/1472871443262/config/customLogo.gif?revision=4");
+    min-height: 75%;
+}
+
+.menu {
+    display: none;
+}
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button">Game Match</a>
+        <div class="w3-right w3-hide-small">
+            <a href="#topnews" class="w3-bar-item w3-button">Top News</a>
+            <a href="#partidos" class="w3-bar-item w3-button">Partidos</a>
+            <a href="#program" class="w3-bar-item w3-button">Programación</a>
+            <a href="loging.html" class="w3-bar-item w3-button">Ingresar</a>
+          </div>
+    </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Game<br>Match</span>
+    </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Top News Container -->
+<div class="w3-container" id="topnews">
+    <div class="w3-content" style="max-width:1100px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">TOP NEWS</span></h5>
+    <img src="https://library.sportingnews.com/styles/crop_style_16_9_mobile_2x/s3/2022-11/nba-plain--ac84c0b5-d419-4e94-b1c9-036377e9425e%20%281%29.png?itok=vmXqPklR" alt="alternative.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p>Arabia Saudita sorprendió venciendo a Argentina 2 a 1. Durante el partido se vio una gran intencionalidad por
+        parte del equipo argentino, sin embargo, no pudo hacerse con la victoria
+    </p>
+    <p>Este partido terminó 2 a 1 con la derrota de Argentina, al cual le anularon varios goles.</p> 
+    </div>
+</div>
+
+<!-- Partidos Container -->
+<div class="w3-container" id="partidos">
+    <div class="w3-content" style="max-width:1100px">
+    
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PARTIDOS</span></h5>
+    
+    <div class="w3-row w3-center w3-card w3-padding">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'encurso');" id="myLink">
+        <div class="w3-col s6 tablink">En curso</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pasados');">
+        <div class="w3-col s6 tablink">Pasados</div>
+        </a>
+    </div>
+
+    <div id="encurso" class="w3-container menu w3-padding-48 w3-card">
+        <h5>00:00:00</h5>
+        <p class="w3-text-grey" id="cero">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+        <h5>00:00:10</h5>
+        <p class="w3-text-grey" id="uno">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+        <h5>00:00:20</h5>
+        <p class="w3-text-grey" id="dos">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+        <h5>00:00:30</h5>
+        <p class="w3-text-grey" id="tres">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+        <h5>00:00:40</h5>
+        <p class="w3-text-grey" id="cuatro">With syrup, butter and lots of berries 8.50</p>
+    </div>
+
+    <div id="Pasados" class="w3-container menu w3-padding-48 w3-card">
+        <h5>Coffee</h5>
+        <p class="w3-text-grey" >Argnetina 1 VS Qatar 2 --- Terminado
+            <a href="infopartido.html">
+                <p>INFO</p>
+            </a>
+        </p><br>
+    
+        <h5>Chocolato</h5>
+        <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+        <h5>Corretto</h5>
+        <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+        <h5>Iced tea</h5>
+        <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+        <h5>Soda</h5>
+        <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+</div>
+
+<!-- Programación Container -->
+<div class="w3-container" id="program" style="padding-bottom:32px;">
+    <div class="w3-content" style="max-width:1100px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PROGRAMACIÓN</span></h5>
+    <img src="https://media.cdn.republica.gt/082022/1660088401369.webp?cw=698&ch=500&extw=jpg" alt="alternative.png" class="w3-image" style="width:100%">
+    <p>Programación que se encuentran en el mundial Qatar 2022:</p>
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    </div>
+</div>
+
+<!-- End page content -->
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-large">
+    <p>Realizado por: Anibal de ávila, Javier Orozco, Leonardo Rodriguez y Neymer Trocha</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("menu");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-black", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-black";
+}
+document.getElementById("myLink").click();
+
+function showUp() {
+    var popup = document.getElementById("popup1");
+    popup.classList.toggle("show");
+}
+</script>
+<script> src = "/src/index.js"  </script>
+
+</body>
+</html>
