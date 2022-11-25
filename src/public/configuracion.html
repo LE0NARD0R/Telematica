@@ -74,33 +74,24 @@
         <div class="w3-col m6 w3-padding-large w3-hide-small">
             <p>Escoja la información para programar:</p>
             <form action="" target="_blank">
-                <p><label for="est1">Lusail Stadium</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="est1" value="est1" required name="est1">
-                </p>
-                <p><label for="est2">Stadium 974</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="est2" value="est2" required name="est2">
-                    </p>
-                <p><label for="est3">Al Janoub Stadium</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="est3" value="est3" required name="est3">
-                    </p>
-                <p><label for="est4">Al Rayyan Stadium</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="est4" value="est4" required name="est4">
-                    </p>
+                    <p>Seleccione un estadio:</p>
+                    <select name="estadios" id="estadios">
+                        <option value="">Escoja una opción</option>
+                        <option value="est1">Lusail Stadium</option>
+                        <option value="est2">Stadium 974</option>
+                        <option value="est3">Al Janoub Stadium</option>
+                        <option value="est4">Al Rayyan Stadium</option>
+                    </select>
                 <p>Seleccione la hora del partido:</p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" required name="date"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" id="date" required name="date"></p>
                 <p>Seleccione el árbitro:</p>
-                <p><p><label for="arb1">Neymer Orozco</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="arb1" value="arb1" required name="arb1">
-                </p>
-                <p><label for="arb2">Alan Brito</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="arb2" value="arb2" required name="arb2">
-                    </p>
-                <p><label for="arb">Juan Cuello</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="arb3" value="arb3" required name="arb3">
-                    </p>
-                <p><label for="arb4">Elsa Noguera</label>
-                    <input class="w3-input w3-padding-16 w3-border" type="checkbox" id="arb4" value="arb4" required name="arb4">
-                    </p>
+                    <select name="arbitros" id="arbitros">
+                        <option value="">Escoja una opción</option>
+                        <option value="arb1">Neymer Orozco</option>
+                        <option value="arb2">Alan Brito</option>
+                        <option value="arb3">Juan Cuello</option>
+                        <option value="arb4">Elsa Noguera</option>
+                    </select>
                 <p><button class="w3-button w3-black" type="submit">PROGRAMAR</button></p>
             </form>
         </div>
