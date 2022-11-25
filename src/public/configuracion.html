@@ -35,22 +35,29 @@
     <!-- Info Section -->
     <div class="w3-row w3-padding-64" id="config">
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">INGRESO DE INFORMACIÓN</span></h5>
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <div class="w3-row w3-padding-64">
             <p>Ingrese la información del equipo:</p>
             <form action="" target="_blank">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del equipo" required name="Name"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del entrenador" required name="EntreName"></p>
-                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre completo de los jugadores" required name="jugname"></p>
-                <p><input class="w3-input w3-padding-16" type="number" placeholder="Número en orden de los jugadores" required name="number"></p>
                 <p>Seleccione el logo:</p>
                 <p><input class="w3-input w3-padding-16" type="file" placeholder="Logo del equipo" required name="logo"></p>
                 <p><button class="w3-button w3-black" type="submit">REGISTRAR EQUIPO</button></p>
             </form>
         </div>
-  
-        <div class="w3-col m6 w3-padding-large">
+        <div class="w3-row w3-padding-64">
+            <p>Ingrese la información del jugador:</p>
+            <form action="" target="_blank">
+                <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Ingrese el ID del equipo" required name="eqid"></p>
+                <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre completo del jugador" required name="jugname"></p>
+                <p><input class="w3-input w3-padding-16" type="number" placeholder="Número en orden del jugador" required name="number"></p>
+                <p><button class="w3-button w3-black" type="submit">REGISTRAR JUGADOR</button></p>
+            </form>
+        </div>
+
+        <div class="w3-row w3-padding-64">
             <p>Ingrese la información del estadio:</p>
-            <form action="/action_page.php" target="_blank">
+            <form action="" target="_blank">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre del estadio" required name="estadio"></p>
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Ciudad en la que se encuentra el estadio" required name="ciudad"></p>
                 <p><input class="w3-input w3-padding-16" type="number" placeholder="Capacidad del estadio" required name="capacidad"></p>
@@ -58,7 +65,7 @@
             </form>
         </div>
 
-        <div class="w3-col m6 w3-padding-large w3-hide-small" id="arbi">
+        <div class="w3-row w3-padding-64" id="arbi">
             <p>Ingrese la información de los árbitros:</p>
             <form method="post" id="arbitros">
                 <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre de los árbitros" required name="arbitro"></p>
@@ -71,7 +78,7 @@
 
     <div class="w3-row w3-padding-64" id="program">
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PROGRAMACIÓN</span></h5>
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <div class="w3-row w3-padding-64">
             <p>Escoja la información para programar:</p>
             <form action="" target="_blank">
                     <p>Seleccione un estadio:</p>
